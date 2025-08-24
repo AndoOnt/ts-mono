@@ -1,6 +1,9 @@
 import { z } from 'zod';
+import { config as dotEnvConfig } from 'dotenv';
 
 const ALLOWED_ENVIRONMENTS = ['development', 'production'] as const;
+
+dotEnvConfig({ path: '.env' });
 
 const envSchema = z.object({
   ENVIRONMENT: z.union(ALLOWED_ENVIRONMENTS.map((c) => z.literal(c))),

@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "es2022",
     "module": "nodenext",
     "rootDir": "./src",
     "baseUrl": ".",
     "allowJs": false,
-    "outDir": "lib",
+    "outDir": "dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,

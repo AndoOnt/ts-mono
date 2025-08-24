@@ -6,6 +6,8 @@
 .idea/usage.statistics.xml
 .idea/shelf
 
+dist
+
 # Dependencies 
 node_modules/
 
