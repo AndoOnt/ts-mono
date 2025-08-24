@@ -1,0 +1,22 @@
+# Development
+.vscode/*
+!.vscode/launch.json
+!.vscode/*.code-snippets
+.idea/workspace.xml
+.idea/usage.statistics.xml
+.idea/shelf
+
+# Dependencies 
+node_modules/
+
+# Environment
+.env
+.env.production
+
+# Logs
+logs/
+*.log
+pnpm-debug.log*
+
+# Misc
+.DS_Store
