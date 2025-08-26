@@ -9,7 +9,7 @@ const app = new Hono();
 app.use(corsMiddleware);
 app.use(logger());
 
-app.get('/public', (c) => {
+app.get('/user', (c) => {
   const { json } = c;
 
   const user: User = {
@@ -17,10 +17,7 @@ app.get('/public', (c) => {
     email: 'ando@g.com',
   };
 
-  return json({
-    message: 'Public route',
-    user,
-  });
+  return json({ body: user });
 });
 
 export { app };
