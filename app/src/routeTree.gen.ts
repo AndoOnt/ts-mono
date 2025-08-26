@@ -8,52 +8,52 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { Route as rootRouteImport } from './routes/__root'
-import { Route as HomeIndexRouteImport } from './routes/home/index'
+import { Route as rootRouteImport } from './routes/__root';
+import { Route as HomeIndexRouteImport } from './routes/home/index';
 
 const HomeIndexRoute = HomeIndexRouteImport.update({
   id: '/home/',
   path: '/home/',
   getParentRoute: () => rootRouteImport,
-} as any)
+} as any);
 
 export interface FileRoutesByFullPath {
-  '/home': typeof HomeIndexRoute
+  '/home': typeof HomeIndexRoute;
 }
 export interface FileRoutesByTo {
-  '/home': typeof HomeIndexRoute
+  '/home': typeof HomeIndexRoute;
 }
 export interface FileRoutesById {
-  __root__: typeof rootRouteImport
-  '/home/': typeof HomeIndexRoute
+  __root__: typeof rootRouteImport;
+  '/home/': typeof HomeIndexRoute;
 }
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/home'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/home'
-  id: '__root__' | '/home/'
-  fileRoutesById: FileRoutesById
+  fileRoutesByFullPath: FileRoutesByFullPath;
+  fullPaths: '/home';
+  fileRoutesByTo: FileRoutesByTo;
+  to: '/home';
+  id: '__root__' | '/home/';
+  fileRoutesById: FileRoutesById;
 }
 export interface RootRouteChildren {
-  HomeIndexRoute: typeof HomeIndexRoute
+  HomeIndexRoute: typeof HomeIndexRoute;
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/home/': {
-      id: '/home/'
-      path: '/home'
-      fullPath: '/home'
-      preLoaderRoute: typeof HomeIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
+      id: '/home/';
+      path: '/home';
+      fullPath: '/home';
+      preLoaderRoute: typeof HomeIndexRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   HomeIndexRoute: HomeIndexRoute,
-}
+};
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
-  ._addFileTypes<FileRouteTypes>()
+  ._addFileTypes<FileRouteTypes>();

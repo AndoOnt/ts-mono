@@ -9,8 +9,6 @@ const getUserFn = async () => {
     url: apiRoutes.user,
   });
 
-  console.log(data);
-
   return data.body;
 };
 
