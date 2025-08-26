@@ -1,16 +1,15 @@
 {
-  "name": "@mono/shared",
+  "name": "ts-mono",
   "version": "1.0.0",
-  "description": "",
-  "main": "./src/types.ts",
-  "types": "./src/types.ts",
   "scripts": {
-    "build": "echo 'No build needed for types'"
+    "server:add": "pnpm --filter @mono/server add",
+    "app:add": "pnpm --filter @mono/app add"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "prettier": "^3.6.2",
     "typescript": "^5.9.2"
   }
 }
